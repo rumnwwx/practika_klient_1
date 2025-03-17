@@ -2,11 +2,10 @@ let app = new Vue({
     el: '#app',
     data: {
         product: "Socks",
-        image: "./assets/vmSocks-blue-onWhite.jpg",
+        image: "./assets/vmSocks-green-onWhite.jpg",
         altText: "A pair of socks",
-        onSale: false,
-        inventory: 100,
-        details: ['80% cotton', '20% polyesyer', 'Gender-neutral'],
+        inStock: false,
+        details: ['80% cotton', '20% polyester', 'Gender-neutral'],
         variants: [
             {
                 variantId: 2234,
@@ -22,14 +21,12 @@ let app = new Vue({
         cart: 0
     },
     methods: {
-        addToCard(){
+        addToCart() {
             this.cart += 1
-        },
-        removeFromCard() {
-            this.cart -= 1
         },
         updateProduct(variantImage) {
             this.image = variantImage
         }
     }
 })
+
